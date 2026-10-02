@@ -1,4 +1,3 @@
-# N, b и c можно ввести через пробел или на отдельных строках.
 data = input().split()
 while len(data) < 3:
     data.extend(input().split())

@@ -13,7 +13,7 @@ for number in numbers[1:]:
     elif operation == '*':
         result *= number
 
-# Переводим результат обратно, сохраняя знак.
+
 digits = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 sign = '-' if result < 0 else ''
 number = abs(result)

@@ -31,7 +31,7 @@ def spiral_matrix(n, m):
 if __name__ == '__main__':
     n, m = map(int, input().split())
     matrix = spiral_matrix(n, m)
-    # Номера строк на рисунке начинаются с нуля.
+
     result = matrix * np.arange(n)[:, None]
     for row in result:
         print(*row)

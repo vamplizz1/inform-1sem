@@ -9,7 +9,7 @@ def generate_data(n, a, b, sigma=1.0):
         raise ValueError('Разброс не может быть отрицательным.')
     x = np.arange(n, dtype=float)
     noise = np.array([random.gauss(0, sigma) for _ in range(n)])
-    # Убираем из шума среднее и линейный тренд, чтобы МНК вернул a и b.
+
     dx = x - x.mean()
     noise -= noise.mean()
     noise -= dx * (np.dot(dx, noise) / np.dot(dx, dx))

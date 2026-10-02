@@ -12,8 +12,8 @@ def best_coefficients(a, b):
     x0, y0, d = extended_gcd(a, b)
     step_x = b // d
     step_y = a // d
-    # Все решения: x = x0 + step_x * k, y = y0 - step_y * k.
-    # Минимум суммы модулей достигается рядом с одним из её изломов.
+
+
     k1 = (-x0) // step_x
     k2 = y0 // step_y
     candidates = []

@@ -10,7 +10,7 @@ def solve_system(augmented):
     solution, _, rank, _ = np.linalg.lstsq(coefficients, constants, rcond=None)
     if not np.allclose(coefficients @ solution, constants, rtol=1e-9, atol=1e-9):
         return None, None
-    # Строки Vh после ранга образуют базис ядра матрицы.
+
     _, _, vh = np.linalg.svd(coefficients, full_matrices=True)
     basis = vh[rank:].T
     return solution, basis
